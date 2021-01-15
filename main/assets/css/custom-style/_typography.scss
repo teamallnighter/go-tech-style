@@ -1,0 +1,113 @@
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/typography
+
+// --------------------------------
+
+:root {
+  // font family
+  --font-primary: EB Garamond, Bodoni Moda;
+
+  // font size
+  --text-base-size: 1em; // body font-size
+  --text-scale-ratio: 1.2; // multiplier used to generate the type scale values 👇
+  
+  // line-height
+  --body-line-height: 1.4;
+  --heading-line-height: 1.2;
+  
+  // capital letters - used in combo with the lhCrop mixin
+  --font-primary-capital-letter: 1;
+
+  // unit - don't modify unless you want to change the typography unit (e.g., from Em to Rem units)
+  --text-unit: 1em; // if not Em units → --text-unit: var(--text-base-size);
+}
+
+:root, * {
+  // type scale
+  --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+  --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+  --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+}
+
+@supports(--css: variables) {
+  @include breakpoint(md) {
+    :root {
+      --text-base-size: 1.25em;
+      --text-scale-ratio: 1.25;
+    }
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+}
+
+// font family
+.font-primary { font-family: var(--font-primary); }
+
+// color
+.color-go-orange-darker { color: alpha(var(--color-go-orange-darker), var(--color-o, 1)); }
+.color-go-orange-dark { color: alpha(var(--color-go-orange-dark), var(--color-o, 1)); }
+.color-go-orange { color: alpha(var(--color-go-orange), var(--color-o, 1)); }
+.color-go-orange-light { color: alpha(var(--color-go-orange-light), var(--color-o, 1)); }
+.color-go-orange-lighter { color: alpha(var(--color-go-orange-lighter), var(--color-o, 1)); }
+.color-electric-indigo-darker { color: alpha(var(--color-electric-indigo-darker), var(--color-o, 1)); }
+.color-electric-indigo-dark { color: alpha(var(--color-electric-indigo-dark), var(--color-o, 1)); }
+.color-electric-indigo { color: alpha(var(--color-electric-indigo), var(--color-o, 1)); }
+.color-electric-indigo-light { color: alpha(var(--color-electric-indigo-light), var(--color-o, 1)); }
+.color-electric-indigo-lighter { color: alpha(var(--color-electric-indigo-lighter), var(--color-o, 1)); }
+.color-skys-the-limit-darker { color: alpha(var(--color-skys-the-limit-darker), var(--color-o, 1)); }
+.color-skys-the-limit-dark { color: alpha(var(--color-skys-the-limit-dark), var(--color-o, 1)); }
+.color-skys-the-limit { color: alpha(var(--color-skys-the-limit), var(--color-o, 1)); }
+.color-skys-the-limit-light { color: alpha(var(--color-skys-the-limit-light), var(--color-o, 1)); }
+.color-skys-the-limit-lighter { color: alpha(var(--color-skys-the-limit-lighter), var(--color-o, 1)); }
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------
+
+// link style
+a, .link {}
+
+mark {
+  background-color: alpha(var(--color-accent), 0.2);
+  color: inherit;
+}
+
+.text-component {
+  --line-height-multiplier: 1;
+  --text-vspace-multiplier: 1;
+
+  blockquote {
+    padding-left: 1em;
+    border-left: 4px solid var(--color-contrast-low);
+  }
+
+  hr {
+    background: var(--color-contrast-low);
+    height: 1px;
+  }
+
+  figcaption {
+    font-size: var(--text-sm);
+    color: var(--color-contrast-medium);
+  }
+}
+
+.article { // e.g., blog posts
+  --body-line-height: 1.58; // set body line-height
+  --text-vspace-multiplier: 1.2; // increase vertical spacing
+}

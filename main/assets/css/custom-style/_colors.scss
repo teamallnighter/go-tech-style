@@ -1,0 +1,108 @@
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/colors
+
+// --------------------------------
+
+:root, [data-theme="default"] {
+  // main
+  @include defineColorHSL(--color-primary-darker, 23, 91%, 35%);
+  @include defineColorHSL(--color-primary-dark, 23, 91%, 45%);
+  @include defineColorHSL(--color-primary, 23, 91%, 55%);
+  @include defineColorHSL(--color-primary-light, 23, 91%, 65%);
+  @include defineColorHSL(--color-primary-lighter, 23, 91%, 75%);
+
+  @include defineColorHSL(--color-accent-darker, 255, 100%, 40%);
+  @include defineColorHSL(--color-accent-dark, 255, 100%, 50%);
+  @include defineColorHSL(--color-accent, 255, 100%, 60%);
+  @include defineColorHSL(--color-accent-light, 255, 100%, 70%);
+  @include defineColorHSL(--color-accent-lighter, 255, 100%, 80%);
+
+  @include defineColorHSL(--color-go-orange-darker, 23, 91%, 35%);
+  @include defineColorHSL(--color-go-orange-dark, 23, 91%, 45%);
+  @include defineColorHSL(--color-go-orange, 23, 91%, 55%);
+  @include defineColorHSL(--color-go-orange-light, 23, 91%, 65%);
+  @include defineColorHSL(--color-go-orange-lighter, 23, 91%, 75%);
+
+  @include defineColorHSL(--color-electric-indigo-darker, 255, 100%, 40%);
+  @include defineColorHSL(--color-electric-indigo-dark, 255, 100%, 50%);
+  @include defineColorHSL(--color-electric-indigo, 255, 100%, 60%);
+  @include defineColorHSL(--color-electric-indigo-light, 255, 100%, 70%);
+  @include defineColorHSL(--color-electric-indigo-lighter, 255, 100%, 80%);
+
+  @include defineColorHSL(--color-skys-the-limit-darker, 195, 100%, 40%);
+  @include defineColorHSL(--color-skys-the-limit-dark, 195, 100%, 50%);
+  @include defineColorHSL(--color-skys-the-limit, 195, 100%, 60%);
+  @include defineColorHSL(--color-skys-the-limit-light, 195, 100%, 70%);
+  @include defineColorHSL(--color-skys-the-limit-lighter, 195, 100%, 80%);
+
+  @include defineColorHSL(--color-black, 240, 8%, 12%);
+  @include defineColorHSL(--color-white, 0, 0%, 100%);
+
+  // feedback
+  @include defineColorHSL(--color-warning-darker, 46, 100%, 47%);
+  @include defineColorHSL(--color-warning-dark, 46, 100%, 50%);
+  @include defineColorHSL(--color-warning, 46, 100%, 61%);
+  @include defineColorHSL(--color-warning-light, 46, 100%, 71%);
+  @include defineColorHSL(--color-warning-lighter, 46, 100%, 80%);
+
+  @include defineColorHSL(--color-success-darker, 94, 48%, 42%);
+  @include defineColorHSL(--color-success-dark, 94, 48%, 48%);
+  @include defineColorHSL(--color-success, 94, 48%, 56%);
+  @include defineColorHSL(--color-success-light, 94, 48%, 65%);
+  @include defineColorHSL(--color-success-lighter, 94, 48%, 74%);
+
+  @include defineColorHSL(--color-error-darker, 349, 75%, 36%);
+  @include defineColorHSL(--color-error-dark, 349, 75%, 44%);
+  @include defineColorHSL(--color-error, 349, 75%, 51%);
+  @include defineColorHSL(--color-error-light, 349, 75%, 59%);
+  @include defineColorHSL(--color-error-lighter, 349, 75%, 67%);
+
+  // color contrasts
+  @include defineColorHSL(--color-bg, 0, 0%, 100%);
+  @include defineColorHSL(--color-contrast-lower, 0, 0%, 95%);
+  @include defineColorHSL(--color-contrast-low, 240, 1%, 83%);
+  @include defineColorHSL(--color-contrast-medium, 240, 1%, 48%);
+  @include defineColorHSL(--color-contrast-high, 240, 4%, 20%);
+  @include defineColorHSL(--color-contrast-higher, 240, 8%, 12%);
+}
+
+// background color
+.bg-go-orange-darker { background-color: alpha(var(--color-go-orange-darker), var(--bg-o, 1)); }
+.bg-go-orange-dark { background-color: alpha(var(--color-go-orange-dark), var(--bg-o, 1)); }
+.bg-go-orange { background-color: alpha(var(--color-go-orange), var(--bg-o, 1)); }
+.bg-go-orange-light { background-color: alpha(var(--color-go-orange-light), var(--bg-o, 1)); }
+.bg-go-orange-lighter { background-color: alpha(var(--color-go-orange-lighter), var(--bg-o, 1)); }
+.bg-electric-indigo-darker { background-color: alpha(var(--color-electric-indigo-darker), var(--bg-o, 1)); }
+.bg-electric-indigo-dark { background-color: alpha(var(--color-electric-indigo-dark), var(--bg-o, 1)); }
+.bg-electric-indigo { background-color: alpha(var(--color-electric-indigo), var(--bg-o, 1)); }
+.bg-electric-indigo-light { background-color: alpha(var(--color-electric-indigo-light), var(--bg-o, 1)); }
+.bg-electric-indigo-lighter { background-color: alpha(var(--color-electric-indigo-lighter), var(--bg-o, 1)); }
+.bg-skys-the-limit-darker { background-color: alpha(var(--color-skys-the-limit-darker), var(--bg-o, 1)); }
+.bg-skys-the-limit-dark { background-color: alpha(var(--color-skys-the-limit-dark), var(--bg-o, 1)); }
+.bg-skys-the-limit { background-color: alpha(var(--color-skys-the-limit), var(--bg-o, 1)); }
+.bg-skys-the-limit-light { background-color: alpha(var(--color-skys-the-limit-light), var(--bg-o, 1)); }
+.bg-skys-the-limit-lighter { background-color: alpha(var(--color-skys-the-limit-lighter), var(--bg-o, 1)); }
+
+// border color
+.border-go-orange-darker { border-color: alpha(var(--color-go-orange-darker), var(--bg-o, 1)); }
+.border-go-orange-dark { border-color: alpha(var(--color-go-orange-dark), var(--bg-o, 1)); }
+.border-go-orange { border-color: alpha(var(--color-go-orange), var(--bg-o, 1)); }
+.border-go-orange-light { border-color: alpha(var(--color-go-orange-light), var(--bg-o, 1)); }
+.border-go-orange-lighter { border-color: alpha(var(--color-go-orange-lighter), var(--bg-o, 1)); }
+.border-electric-indigo-darker { border-color: alpha(var(--color-electric-indigo-darker), var(--bg-o, 1)); }
+.border-electric-indigo-dark { border-color: alpha(var(--color-electric-indigo-dark), var(--bg-o, 1)); }
+.border-electric-indigo { border-color: alpha(var(--color-electric-indigo), var(--bg-o, 1)); }
+.border-electric-indigo-light { border-color: alpha(var(--color-electric-indigo-light), var(--bg-o, 1)); }
+.border-electric-indigo-lighter { border-color: alpha(var(--color-electric-indigo-lighter), var(--bg-o, 1)); }
+.border-skys-the-limit-darker { border-color: alpha(var(--color-skys-the-limit-darker), var(--bg-o, 1)); }
+.border-skys-the-limit-dark { border-color: alpha(var(--color-skys-the-limit-dark), var(--bg-o, 1)); }
+.border-skys-the-limit { border-color: alpha(var(--color-skys-the-limit), var(--bg-o, 1)); }
+.border-skys-the-limit-light { border-color: alpha(var(--color-skys-the-limit-light), var(--bg-o, 1)); }
+.border-skys-the-limit-lighter { border-color: alpha(var(--color-skys-the-limit-lighter), var(--bg-o, 1)); }
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------
